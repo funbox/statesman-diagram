@@ -6,4 +6,5 @@ rvm:
   - 2.1.9
 
 before_install:
+- sudo apt-get update -yq && sudo apt-get install -y graphviz
 - gem install bundler -v 1.14.4
