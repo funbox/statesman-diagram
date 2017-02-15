@@ -1,5 +1,7 @@
 # Statesman State Diagram
 
+[![Vexor CI](https://ci.vexor.io/projects/e5845e24-f99f-4ede-a23e-4541600f4d26/status.svg)](https://ci.vexor.io/ui/projects/e5845e24-f99f-4ede-a23e-4541600f4d26/builds)
+
 Adds `.to_dot` method to `Statesman::Machine`. It can export your machine
 class definition to the
 [DOT](https://en.wikipedia.org/wiki/DOT_%28graph_description_language%29) format.
