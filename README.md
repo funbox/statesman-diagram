@@ -33,6 +33,7 @@ Or install it yourself as:
 
 * GraphViz (the `dot` program)
   * `brew install graphviz` on OS X / macOS
+  * `sudo apt-get install graphviz` on Ubuntu / Debian
 
 ## Usage
 
