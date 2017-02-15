@@ -1,5 +1,6 @@
 # Statesman State Diagram
 
+[![Gem Version](https://badge.fury.io/rb/statesman-diagram.svg)](https://badge.fury.io/rb/statesman-diagram)
 [![Vexor CI](https://ci.vexor.io/projects/e5845e24-f99f-4ede-a23e-4541600f4d26/status.svg)](https://ci.vexor.io/ui/projects/e5845e24-f99f-4ede-a23e-4541600f4d26/builds)
 
 Adds `.to_dot` method to `Statesman::Machine`. It can export your machine
