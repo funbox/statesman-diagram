@@ -1,15 +1,21 @@
-# Statesman::Diagram
+# Statesman State Diagram
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/statesman/diagram`. To experiment with that code, run `bin/console` for an interactive prompt.
+Adds `.to_dot` method to `Statesman::Machine`. It can export your machine
+class definition to the
+[DOT](https://en.wikipedia.org/wiki/DOT_%28graph_description_language%29) format.
 
-TODO: Delete this and the text above, and describe your gem
+Also adds a Rake task called `statesman:diagram`. It runs the `dot`
+program (GraphViz) to make a PNG image from the DOT representation of the
+machine class.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'statesman-diagram'
+group :development do
+  gem 'statesman-diagram'
+end
 ```
 
 And then execute:
@@ -20,9 +26,15 @@ Or install it yourself as:
 
     $ gem install statesman-diagram
 
+## Prerequisites
+
+* GraphViz (the `dot` program)
+  * `brew install graphviz` on OS X / macOS
+
 ## Usage
 
-TODO: Write usage instructions here
+Run `rake statesman:diagram[My::State::Machine::Class]`.
+Find the state diagram of this class in `My::State::Machine::Class.png`.
 
 ## Development
 
@@ -32,10 +44,8 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/statesman-diagram.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/vassilevsky/statesman-diagram.
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
