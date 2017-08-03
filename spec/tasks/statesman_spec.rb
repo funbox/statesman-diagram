@@ -18,8 +18,8 @@ end
 describe 'statesman:diagram' do
   it 'produces a png image with a diagram of the given state machine class' do
     Rake::Task['statesman:diagram'].invoke('Spaghetti::Machine')
-    expect(File.exists?('Spaghetti::Machine.png')).to be true
-    expect(File.size('Spaghetti::Machine.png')).to be > 100
-    FileUtils.rm('Spaghetti::Machine.png')
+    expect(File.exists?('Spaghetti_Machine.png')).to be true
+    expect(File.size('Spaghetti_Machine.png')).to be > 100
+    FileUtils.rm('Spaghetti_Machine.png')
   end
 end

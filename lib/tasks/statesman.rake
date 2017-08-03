@@ -6,7 +6,7 @@ namespace :statesman do
     dot = machine_class.to_dot
     puts "Here it is in the textual form:"
     puts dot
-    filename = "#{machine_class}.png"
+    filename = "#{machine_class.name.gsub('::','_')}.png"
     cmd = %W(dot -Tpng -o#{filename})
     puts "Running '#{cmd.join(' ')}' with this ^ as stdin..."
     require 'open3'
