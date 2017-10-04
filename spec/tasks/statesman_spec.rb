@@ -1,5 +1,6 @@
+require 'spec_helper'
 require 'rake'
-require 'statesman-diagram'
+
 load 'tasks/statesman.rake'
 
 task :environment do
