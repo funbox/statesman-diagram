@@ -40,7 +40,10 @@ Or install it yourself as:
 ## Usage
 
 Run `rake statesman:diagram[My::State::Machine::Class]`.
-Find the state diagram of this class in `My::State::Machine::Class.png`.
+Find the state diagram of this class in `My_State_Machine_Class.png`.
+
+You can also specify the name of the file `rake statesman:diagram[My::State::Machine::Class, ./temp/state]`
+Find the state diagram of this class in `./temp/state.png`.
 
 ## Development
 
