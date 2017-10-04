@@ -6,8 +6,9 @@ require 'statesman/diagram/version'
 Gem::Specification.new do |spec|
   spec.name          = 'statesman-diagram'
   spec.version       = Statesman::Diagram::VERSION
-  spec.authors       = ['Ilya Vassilevsky']
-  spec.email         = ['vassilevsky@gmail.com']
+
+  spec.authors       = ['Ilya Vassilevsky',      'Andrey Lunetskas']
+  spec.email         = ['vassilevsky@gmail.com', 'lunacorp@mail.ru']
 
   spec.summary       = 'Generates DOT representations of Statesman machines and runs dot to render them to PNGs'
   spec.homepage      = 'https://github.com/vassilevsky/statesman-diagram'
