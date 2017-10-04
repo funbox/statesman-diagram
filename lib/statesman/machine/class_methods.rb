@@ -12,6 +12,10 @@ module Statesman
       def to_dot
         diagram.to_dot
       end
+
+      def to_png(file_name = nil)
+        diagram.to_png(file_name)
+      end
     end
   end
 end

@@ -1,3 +1,5 @@
+require 'open3'
+
 module Statesman
   class Diagram
     # @param [String] name  - name of the diagram.
@@ -12,6 +14,13 @@ module Statesman
       format("digraph %{name} {\n  %{body}\n}", name: @name, body: dot_body.join("\n  "))
     end
 
+    def to_png(file_name = nil)
+      file_name ||= @name
+      file_name += '.png'
+
+      build_png(file_name)
+    end
+
     private
 
     # @return [String]
@@ -21,6 +30,20 @@ module Statesman
           "#{vertex} -> #{to};"
         end
       end.flatten
+    end
+
+    def build_png(file_name)
+      cmd = ['dot', '-Tpng', "-o#{file_name}"]
+
+      puts "Running '#{cmd.join(' ')}' with this ^ as stdin..."
+
+      output, status = Open3.capture2e(*cmd, stdin_data: to_dot)
+      if status.success?
+        puts "Success. You can open #{file_name} and see the diagram."
+      else
+        puts 'The command failed:'
+        puts output
+      end
     end
   end
 end
