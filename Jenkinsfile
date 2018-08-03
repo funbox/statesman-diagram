@@ -6,7 +6,13 @@ pipeline {
     stages {
         stage('Setup') {
             steps {
-                sh 'bundle'
+                sh '''
+                    ruby -v
+                    gem -v
+
+                    gem install bundler
+                    bundle
+                '''
             }
         }
 
