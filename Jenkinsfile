@@ -6,14 +6,11 @@ pipeline {
     stages {
         stage('Setup') {
             steps {
-                sh '''
-                    #!/bin/bash
-
+                sh '''#!/bin/bash
                     source /var/jenkins_home/.rvm/scripts/rvm
                     rvm use 2.5.1
                     ruby -v
                     gem -v
-
                     gem install bundler
                     bundle
                 '''
