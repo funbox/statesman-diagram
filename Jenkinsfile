@@ -10,7 +10,7 @@ pipeline {
                     source /var/jenkins_home/.rvm/scripts/rvm
                     rvm use 2.5.1
                     bundle
-                    bundle exec rubocop --format=json --out=rubocop-result.json
+                    bundle exec rubocop --format=json --out=rubocop-result.json || true
                 '''
 
                 script {
