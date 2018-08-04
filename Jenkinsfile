@@ -4,40 +4,19 @@ pipeline {
     agent any
 
     stages {
-        stage('Setup') {
+        stage('Test') {
             steps {
                 sh '''#!/bin/bash
                     source /var/jenkins_home/.rvm/scripts/rvm
                     rvm use 2.5.1
-                    ruby -v
-                    gem -v
-                    gem install bundler
                     bundle
+                    bundle exec rake --trace
+                    bundle exec rubocop --format=json --out=rubocop-result.json
                 '''
-            }
-        }
 
-        stage('Test') {
-            parallel {
-                stage('RSpec') {
-                    steps {
-                        sh 'bundle exec rake --trace'
-                    }
-                }
-
-                stage('RuboCop') {
-                    steps {
-                        sh 'bundle exec rubocop --format=json --out=rubocop-result.json'
-                    }
-                }
-            }
-        }
-
-        stage('SonarQube analysis') {
-            steps {
                 script {
                     def scannerHome = tool 'latest';
-                    withSonarQubeEnv('funbox') {
+                    withSonarQubeEnv('local') {
                         sh "${scannerHome}/bin/sonar-scanner"
                     }
                 }
