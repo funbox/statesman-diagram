@@ -7,8 +7,9 @@ pipeline {
         stage('Setup') {
             steps {
                 sh '''
-                    echo $SHELL
-                    . /var/jenkins_home/.rvm/scripts/rvm
+                    #!/bin/bash
+
+                    source /var/jenkins_home/.rvm/scripts/rvm
                     rvm use 2.5.1
                     ruby -v
                     gem -v
