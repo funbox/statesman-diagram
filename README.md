@@ -24,36 +24,56 @@ end
 
 And then execute:
 
-    $ bundle
+```bash
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install statesman-diagram
+```bash
+$ gem install statesman-diagram
+```
 
 ## Prerequisites
 
-* GraphViz (the `dot` program)
-  * `brew install graphviz` on OS X / macOS
-  * `sudo apt-get install graphviz` on Ubuntu / Debian
+* GraphViz (the `dot` program):
+  * `brew install graphviz` on macOS.
+  * `sudo apt-get install graphviz` on Ubuntu / Debian.
 
 ## Usage
 
-Run `rake statesman:diagram[My::State::Machine::Class]`.
+Run: 
+
+```
+rake statesman:diagram[My::State::Machine::Class]
+```
+
 Find the state diagram of this class in `My_State_Machine_Class.png`.
 
-You can also specify the name of the file `rake statesman:diagram[My::State::Machine::Class, ./temp/state]`
-Find the state diagram of this class in `./temp/state.png`.
+You can also specify the name of the file: 
+
+```
+rake statesman:diagram[My::State::Machine::Class, ./temp/state]
+```
+
+And the state diagram of this class will be placed in `./temp/state.png`.
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bin/setup` to install dependencies. 
+You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+To install this gem onto your local machine, run `bundle exec rake install`. 
+To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, 
+which will create a git tag for the version, push git commits and tags, 
+and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/vassilevsky/statesman-diagram.
+Bug reports and pull requests are welcome on GitHub at https://github.com/funbox/statesman-diagram.
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+[![Sponsored by FunBox](https://funbox.ru/badges/sponsored_by_funbox_centered.svg)](https://funbox.ru)
