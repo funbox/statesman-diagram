@@ -25,13 +25,13 @@ end
 And then execute:
 
 ```bash
-$ bundle
+bundle
 ```
 
 Or install it yourself as:
 
 ```bash
-$ gem install statesman-diagram
+gem install statesman-diagram
 ```
 
 ## Prerequisites
