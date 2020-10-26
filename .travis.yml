@@ -1,0 +1,11 @@
+language: ruby
+
+rvm:
+  - 2.7
+  - 2.6
+  - 2.5
+
+before_install:
+- sudo apt-get update -yq
+- sudo apt-get install -y graphviz
+- gem install bundler -v 1.14.4
