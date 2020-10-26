@@ -42,7 +42,7 @@ gem install statesman-diagram
 
 ## Usage
 
-Run: 
+Run:
 
 ```
 rake statesman:diagram[My::State::Machine::Class]
@@ -50,7 +50,7 @@ rake statesman:diagram[My::State::Machine::Class]
 
 Find the state diagram of this class in `My_State_Machine_Class.png`.
 
-You can also specify the name of the file: 
+You can also specify the name of the file:
 
 ```
 rake statesman:diagram[My::State::Machine::Class, ./temp/state]
@@ -60,12 +60,12 @@ And the state diagram of this class will be placed in `./temp/state.png`.
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. 
+After checking out the repo, run `bin/setup` to install dependencies.
 You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake install`. 
-To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, 
-which will create a git tag for the version, push git commits and tags, 
+To install this gem onto your local machine, run `bundle exec rake install`.
+To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`,
+which will create a git tag for the version, push git commits and tags,
 and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
