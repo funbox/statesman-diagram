@@ -1,6 +1,6 @@
 # Statesman State Diagram
 
-[![Gem Version](https://badge.fury.io/rb/statesman-diagram.svg)](https://badge.fury.io/rb/statesman-diagram)
+[![Gem Version](https://img.shields.io/gem/v/statesman-diagram.svg)](https://rubygems.org/gems/statesman-diagram)
 
 Extension of [Statesman](https://rubygems.org/gems/statesman) to get state diagrams.
 
