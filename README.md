@@ -2,6 +2,7 @@
 
 [![Gem Version](https://img.shields.io/gem/v/statesman-diagram.svg)](https://rubygems.org/gems/statesman-diagram)
 [![Travis CI](https://img.shields.io/travis/com/funbox/statesman-diagram)](https://travis-ci.com/github/funbox/statesman-diagram)
+[![Coveralls](https://img.shields.io/coveralls/funbox/statesman-diagram.svg)](https://coveralls.io/github/funbox/statesman-diagram)
 
 Extension of [Statesman](https://rubygems.org/gems/statesman) to get state diagrams.
 
